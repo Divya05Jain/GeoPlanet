@@ -1,0 +1,188 @@
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: none;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://geotree.geoplanetsolution.in/static/home/images/bg.webp') no-repeat center center fixed;
+            background-size: cover;
+            opacity: 0.25;
+            z-index: -1;
+        }
+
+        .container {
+            background: rgba(255, 255, 255);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            box-sizing: border-box;
+            z-index: 1;
+        }
+
+        .logo {
+            width: 50%;
+    margin-bottom: 20px;
+    margin-left: 25%;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            color: #555;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="email"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: rgb(55, 131, 81);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: rgb(55, 131, 81);
+        }
+
+        .dialog {
+            display: none; 
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            width: 90%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+
+        .dialog.show {
+            display: block;
+            opacity: 1;
+        }
+
+        .dialog-header {
+            padding: 5px;
+            font-size: 1.2em;
+            border-bottom: 1px solid #ddd;
+            background: rgb(55, 131, 81);
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .dialog-title {
+            margin: 0;
+        }
+
+        .dialog-close {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        .dialog-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .dialog-footer {
+            padding: 10px;
+            background: #ffffff;
+            display: flex; 
+            justify-content: center; 
+        }
+
+        .dialog-footer button {
+            background: rgb(55, 131, 81);
+            color: #fff;
+            border: none;
+            padding: 5px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px; 
+        }
+
+        .dialog-footer button:hover {
+            background: rgb(55, 131, 81);
+        }
+
+        footer {
+            background-color: #676565;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            input[type="email"] {
+                font-size: 14px;
+            }
+
+            button {
+                font-size: 14px;
+            }
+
+            .dialog-header {
+                font-size: 1em;
+            }
+
+            .dialog-footer button {
+                font-size: 14px;
+            }
+        }
+    
